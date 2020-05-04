@@ -2,3 +2,7 @@
 bin
 obj
 *.db
+appsettings.json
+chattingapp.db-shm
+chattingapp.db-wal
+
