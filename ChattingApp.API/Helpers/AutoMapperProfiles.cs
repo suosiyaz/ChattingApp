@@ -24,6 +24,7 @@ namespace ChattingApp.API.Helpers
                     src => src.DateOfBirth.CalculateAge()
                 ));
             CreateMap<Photo, PhotosForDetailedDto>();
+            CreateMap<UserForUpdateDto, User>();
         }
     }
 }
