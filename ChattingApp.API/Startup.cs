@@ -41,6 +41,7 @@ namespace ChattingApp.API
                 Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
             services.AddCors();
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper(typeof(ChattingRepository).Assembly);
             services.AddScoped<IAuthRepository, AuthRepository>(); 
             services.AddScoped<IChattingRepository, ChattingRepository>(); 
