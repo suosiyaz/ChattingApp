@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using AutoMapper;
 using ChattingApp.API.Data;
 using ChattingApp.API.Dtos;
+using ChattingApp.API.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChattingApp.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]

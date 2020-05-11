@@ -45,6 +45,7 @@ namespace ChattingApp.API
             services.AddAutoMapper(typeof(ChattingRepository).Assembly);
             services.AddScoped<IAuthRepository, AuthRepository>(); 
             services.AddScoped<IChattingRepository, ChattingRepository>(); 
+            services.AddScoped<LogUserActivity>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters
