@@ -14,6 +14,7 @@ using Microsoft.Extensions.Options;
 
 namespace ChattingApp.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/users/{userId}/photos")]
     [ApiController]

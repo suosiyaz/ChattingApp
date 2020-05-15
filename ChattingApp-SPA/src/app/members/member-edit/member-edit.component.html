@@ -28,7 +28,8 @@
           </div>
           <div>
             <strong>Last Active:</strong>
-            <p>{{ user.lastActive | timeAgo }}</p>
+            <!-- <p>{{ user.lastActive.toString() | timeAgo }}</p> -->
+            <p>{{ user.lastActive | timeago:false }}</p>
           </div>
           <div>
             <strong>Member Since:</strong>
