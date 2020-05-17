@@ -3,6 +3,7 @@
   "rules": {
     "no-string-literal": false,
     "object-literal-shorthand":false,
+    "prefer-for-of":false,
     "align": {
       "options": [
         "parameters",

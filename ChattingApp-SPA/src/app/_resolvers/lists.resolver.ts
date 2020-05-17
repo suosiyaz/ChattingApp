@@ -19,7 +19,6 @@ export class ListsResolver implements Resolve<User[]> {
         private alertify: AlertifyService) { }
 
     resolve(): Observable<User[]> {
-        // tslint:disable-next-line: no-string-literal
         return this.userService.getUsers(this.pageNumber, this.pageSize, null, this.likesParm).pipe(
             catchError(error => {
                 this.alertify.error('Problem retrieving data');
