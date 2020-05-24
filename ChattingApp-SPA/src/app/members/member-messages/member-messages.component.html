@@ -30,11 +30,11 @@
           <div class="chat-body">
             <div class="header">
               <small class="text-muted">
-                <!-- <span class="fa fa-clock-o">{{ message.messageSent | timeAgo }}</span> -->
-                <span class="fa fa-clock-o">{{ message.messageSent | timeago: false }}</span>
+                <span class="fa fa-clock-o">{{ message.messageSent.toString() | timeAgo }}</span>
+                <!-- <span class="fa fa-clock-o">{{ message.messageSent | timeago: false }}</span> -->
                 <span *ngIf="!message.isRead" class="text-danger">(unread)</span>
-                <!-- <span *ngIf="message.isRead" class="text-success">(Read {{ message.dateRead | timeAgo }})</span> -->
-                <span *ngIf="message.isRead" class="text-success">(Read {{ message.dateRead | timeago: false }})</span>
+                <span *ngIf="message.isRead" class="text-success">(Read {{ message.dateRead.toString() | timeAgo }})</span>
+                <!-- <span *ngIf="message.isRead" class="text-success">(Read {{ message.dateRead | timeago: false }})</span> -->
               </small>
               <strong class="primary-font float-right">{{ message.senderKnownAs }}</strong>              
             </div>

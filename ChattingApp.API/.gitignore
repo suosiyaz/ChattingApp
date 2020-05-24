@@ -5,4 +5,5 @@ obj
 appsettings.json
 chattingapp.db-shm
 chattingapp.db-wal
+wwwroot
 

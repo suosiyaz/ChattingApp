@@ -38,8 +38,8 @@
                 <strong>{{message.recipientKnownAs}}</strong>
           </div>
         </td>
-        <!-- <td>{{message.messageSent | timeAgo}}</td> -->
-        <td>{{message.messageSent | timeago: false }}</td>
+        <td>{{message.messageSent.toString() | timeAgo}}</td>
+        <!-- <td>{{message.messageSent | timeago: false }}</td> -->
         <td>
           <button class="btn btn-danger" (click)="$event.stopPropagation()" (click)="deleteMessage(message.id)">Delete</button>
         </td>
